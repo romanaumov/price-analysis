@@ -136,7 +136,7 @@ async def download_pages(iteration, csv_file, output_folder):
     print(f"\nDownload complete!\nSuccess: {success_count}\nErrors: {error_count}\nSkipped: {skipped_count}")
     
 if __name__ == "__main__":
-    csv_file = "/home/ubuntu/price-analysis/input/urls.csv"
-    output_folder = "/home/ubuntu/price-analysis/output"
+    csv_file = "/home/airflow/price-analysis/input/urls.csv"
+    output_folder = "/home/airflow/price-analysis/output"
     i = 0 # for testing purpose
     asyncio.run(download_pages(i, csv_file, output_folder))
