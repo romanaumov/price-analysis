@@ -134,13 +134,9 @@ async def download_pages(iteration, csv_file, output_folder):
         await browser.close()
 
     print(f"\nDownload complete!\nSuccess: {success_count}\nErrors: {error_count}\nSkipped: {skipped_count}")
-
-# Example usage
-def scraper(i, **kwargs):
-    # csv_file = "./data/cleaned_stockcode_urls.csv"  # Input CSV with URLs
-    # output_folder="./data/woolworth-playwright"
     
+if __name__ == "__main__":
     csv_file = "/home/ubuntu/price-analysis/input/urls.csv"
     output_folder = "/home/ubuntu/price-analysis/output"
-    
+    i = 0 # for testing purpose
     asyncio.run(download_pages(i, csv_file, output_folder))
